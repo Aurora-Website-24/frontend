@@ -1,19 +1,24 @@
-import { Parallax, ParallaxLayer } from "@react-spring/parallax"
+import React from "react";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import NavigationBar from "./navBar";
 
 export default function MainPage() {
-    return (
-        <div className="main-page-container">
-            <Parallax pages={2} style={{ top: '0', left: '0' }} class="animation">
-                <ParallaxLayer offset={0} speed={0.25}>
-                    <div class="animation_layer parallax" id="artback"></div>
-                </ParallaxLayer>
-                <ParallaxLayer offset={0} speed={0.01}>
-                    <div class="animation_layer parallax" id="text"><h1>hi</h1></div>
-                </ParallaxLayer>
-                <ParallaxLayer offset={0} speed={0.40}>
-                    <div class="animation_layer parallax" id="mountain"></div>
-                </ParallaxLayer>
-                {/* <ParallaxLayer offset={0} speed={-0.1}>
+  return (
+    <div className="main-page-container">
+      <NavigationBar /> {NavigationBar}
+      <Parallax pages={2} style={{ top: "0", left: "0" }} class="animation">
+        <ParallaxLayer offset={0} speed={0.25}>
+          <div class="animation_layer parallax" id="artback"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.01}>
+          <div class="animation_layer parallax" id="text">
+            <h1>hi</h1>
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.4}>
+          <div class="animation_layer parallax" id="mountain"></div>
+        </ParallaxLayer>
+        {/* <ParallaxLayer offset={0} speed={-0.1}>
           <div class="animation_layer parallax" id="logoland"></div>
         </ParallaxLayer>
         <ParallaxLayer offset={0} speed={0.3}>
@@ -37,7 +42,7 @@ export default function MainPage() {
         <ParallaxLayer offset={1} speed={0.25}>
           <TextBlock />
         </ParallaxLayer> */}
-            </Parallax>
-        </div>
-    )
+      </Parallax>
+    </div>
+  );
 }
