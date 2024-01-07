@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/free-mode';
 
-import { Autoplay, Navigation, FreeMode, Pagination } from 'swiper/modules';
+import './Partners.css'
+
+import { Autoplay, Navigation} from 'swiper/modules';
 
 import Insta from './Instagram_icon.png'
 import Face from './Facebook_Logo_2023.png'
@@ -14,43 +14,66 @@ import Face from './Facebook_Logo_2023.png'
 
 function Partner_Title () {
     return (
-        <h1 className="h-[109px] text-center [text-shadow:0px_4px_25.1px_#ffffff80] [font-family:'Inter-Bold',Helvetica] font-bold text-white text-[69.9px] tracking-[6.99px] leading-[108.8px] whitespace-nowrap">
+        <h1 className="h-[109px] text-center [text-shadow:0px_4px_25.1px_#ffffff80] [font-family:'Inter-Bold',Helvetica] font-bold text-white text-3xl md:text-[69.9px] md:tracking-[6.99px] tracking-normal leading-[108.8px] md:leading-8 whitespace-nowrap">
           &lt;/partners&gt;
         </h1>
     )
 };
 
 const Carousel = () => {
-  const images = [Insta, Face, Insta, Face, Face, Insta, Face];
-  
+  const handleSlideChange = (swiper) => {
+    console.log("Bro wtf")
+    const currentIndex = swiper.activeIndex;
+    
+    swiper.slides.forEach((slide) => {
+      slide.style.transform = 'scale(0.5)';
+    });
+    if (swiper.slides[currentIndex]) {
+      swiper.slides[currentIndex].style.transform = 'scale(1)';
+    }
+
+    if (swiper.slides[currentIndex - 2]) {
+      swiper.slides[currentIndex - 2].style.transform = 'scale(0.5)';
+    }
+    if (swiper.slides[currentIndex + 2]) {
+      swiper.slides[currentIndex + 2].style.transform = 'scale(0.5)';
+    }
+    if (swiper.slides[currentIndex + 1]) {
+      swiper.slides[currentIndex + 1].style.transform = 'scale(0.75)';
+    }
+    if (swiper.slides[currentIndex - 1]) {
+      swiper.slides[currentIndex - 1].style.transform = 'scale(0.75)';
+    }
+    if (swiper.slides[currentIndex - 3]) {
+      swiper.slides[currentIndex - 3].style.transform = 'scale(0.1)';
+    }
+    if (swiper.slides[currentIndex + 3]) {
+      swiper.slides[currentIndex + 3].style.transform = 'scale(0.1)';
+    }
+  }
+
+  const images = [Face, Insta, Face, Face, Insta, Face, Insta, Face, Insta, Face];
   return(
-  <div className="flex justify-center items-center">
+  <div className="w-full overflow-hidden">
     <Swiper
-      breakpoints={{
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-        },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 50,
-        },
-    }}
-    freeMode={true}
-    navigation={true}
-    loop={true}     
-    modules={[Navigation, FreeMode]}
-    className="mySwiper"
+      className='mySwiper'
+      navigation={true}
+      modules={[Navigation, Autoplay]}
+      grabCursor={true}
+      centeredSlides={true}
+      slidesPerView={5}
+      onSlideChange={handleSlideChange}
+      autoplay={{
+        delay: 1500,
+        disableOnInteraction: false,
+      }}
+      loop={true}
   >
     {images.map((image, index) => (
-      <SwiperSlide key={index} className="p-4">
+      <SwiperSlide key={index} className="w-full h-auto p-8">
         <img 
           src={image} 
-          className={`m-auto object-contain `}
+          className={`w-full h-auto object-cover `}
           alt={`Slide ${index}`}
         />
       </SwiperSlide>
@@ -60,12 +83,12 @@ const Carousel = () => {
   )
 };
 
-
-
 function Partners(){
     return (
       <div className="text-white">
-        <Partner_Title />
+        <div className="p-8">
+          <Partner_Title />
+        </div>
         <Carousel />
       </div>
     )
