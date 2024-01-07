@@ -1,3 +1,4 @@
+
 import { Button } from "@nextui-org/react"
 import { Parallax, ParallaxLayer } from "@react-spring/parallax"
 import About from "../components/About"
@@ -50,4 +51,3 @@ export default function MainPage() {
             </Parallax>
         </div>
     )
-}
