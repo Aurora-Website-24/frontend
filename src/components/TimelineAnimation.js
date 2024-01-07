@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../index.css";
-const dottedLineHeight = document.querySelector(
-  ".timeline-dotted-line"
-).offsetHeight;
+import TimelineCard from "./TimelineCard";
 
 const TimelineAnimation = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -23,12 +21,12 @@ const TimelineAnimation = () => {
       }
 
       // Update in-view items
-      const updatedInViewItems = items.map((item, index) => {
-        const circlePosition = item.offsetTop;
+      const updatedInViewItems = cards.map((card, index) => {
+        const cardPosition = card.offsetTop;
 
         return {
           index,
-          inView: scrollPosition > circlePosition,
+          inView: scrollPosition > cardPosition,
         };
       });
 
@@ -42,6 +40,8 @@ const TimelineAnimation = () => {
     };
   }, [scrollPosition]);
 
+  const cards = document.querySelectorAll(".timeline-card");
+
   return (
     <div className="timeline-container">
       <div className="timeline-dotted-line"></div>
@@ -50,12 +50,17 @@ const TimelineAnimation = () => {
         style={{ height: `${scrollPosition}px` }}
       ></div>
       <ul>
-        {items.map((item, index) => (
+        {Array.from(cards).map((card, index) => (
           <li
             key={index}
             className={inViewItems[index]?.inView ? "in-view" : ""}
           >
-            <div></div>
+            <TimelineCard
+              time={card.dataset.time}
+              date={card.dataset.date}
+              title={card.dataset.title}
+              image={card.dataset.image}
+            />
           </li>
         ))}
       </ul>
