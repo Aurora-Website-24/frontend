@@ -57,11 +57,23 @@ const Carousel = () => {
   <div className="w-full overflow-hidden">
     <Swiper
       className='mySwiper'
-      navigation={true}
       modules={[Navigation, Autoplay]}
       grabCursor={true}
       centeredSlides={true}
-      slidesPerView={5}
+      breakpoints={{
+        160: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+      }}
+      navigation={{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }}
       onSlideChange={handleSlideChange}
       autoplay={{
         delay: 1500,
@@ -69,11 +81,27 @@ const Carousel = () => {
       }}
       loop={true}
   >
+        <div className="swiper-button-next w-2 h-2 md:w-10 md:h-10 lg:w-12 lg:h-12">
+          <svg
+            className="w-full h-full text-black fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+          </svg>
+        </div>
+        <div className="swiper-button-prev w-2 h-2 md:w-10 md:h-10 lg:w-12 lg:h-12">
+          <svg
+            className="w-full h-full text-black fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+          </svg>
+        </div>
     {images.map((image, index) => (
-      <SwiperSlide key={index} className="w-full h-auto p-8">
+      <SwiperSlide key={index} className="w-full h-auto">
         <img 
           src={image} 
-          className={`w-full h-auto object-cover `}
+          className={`w-full h-auto m-auto rounded-xl object-cover p-4`}
           alt={`Slide ${index}`}
         />
       </SwiperSlide>
