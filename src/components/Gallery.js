@@ -1,0 +1,52 @@
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import './Gallery.css'
+
+import i1 from "./001.jpg";
+import i2 from "./002.jpg";
+import i3 from "./003.jpg";
+import i4 from "./004.jpg";
+import i5 from "./005.jpg";
+
+import { Autoplay, Navigation} from 'swiper/modules';
+import Title_Stuff from './Title_Stuff';
+
+function Gallery() {
+  const images = [i1, i2, i3, i4, i5]
+    return(
+      <>
+      <Title_Stuff name="gallery" />
+      <div className="w-full overflow-hidden">
+          <Swiper
+            className='mySwiper'
+            modules={[Navigation, Autoplay]}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={1.5}
+            navigation={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index} className="w-full h-auto">
+              <img 
+                src={image} 
+                className={`w-full h-auto m-auto rounded-3xl object-cover p-4`}
+                alt={`Slide ${index}`}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      </>
+    )
+}
+
+export default Gallery

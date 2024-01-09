@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -10,15 +10,8 @@ import { Autoplay, Navigation} from 'swiper/modules';
 
 import Insta from './Instagram_icon.png'
 import Face from './Facebook_Logo_2023.png'
+import Title_Stuff from './Title_Stuff';
 
-
-function Partner_Title () {
-    return (
-        <h1 className="h-[109px] text-center [text-shadow:0px_4px_25.1px_#ffffff80] [font-family:'Inter-Bold',Helvetica] font-bold text-white text-3xl md:text-[69.9px] md:tracking-[6.99px] tracking-normal leading-[108.8px] md:leading-8 whitespace-nowrap">
-          &lt;/partners&gt;
-        </h1>
-    )
-};
 
 const Carousel = () => {
   const handleSlideChange = (swiper) => {
@@ -81,7 +74,7 @@ const Carousel = () => {
       }}
       loop={true}
   >
-        <div className="swiper-button-next w-2 h-2 md:w-10 md:h-10 lg:w-12 lg:h-12">
+        <div className="swiper-button-next w-2 h-2y md:w-10 md:h-10 lg:w-12 lg:h-12">
           <svg
             className="w-full h-full text-black fill-current"
             viewBox="0 0 20 20"
@@ -115,7 +108,7 @@ function Partners(){
     return (
       <div className="text-white">
         <div className="p-8">
-          <Partner_Title />
+          <Title_Stuff name="partners" />
         </div>
         <Carousel />
       </div>
