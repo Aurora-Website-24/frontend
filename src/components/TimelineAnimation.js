@@ -1,71 +1,80 @@
 import React, { useEffect, useState } from "react";
-import "../index.css";
+import neuralnetworks from "../images/neuralnetworks.png";
+import reactworkshop from "../images/reactworkshop.png";
+import timelinetitle from "../images/timelinetitle.svg";
 import TimelineCard from "./TimelineCard";
 
-const TimelineAnimation = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [inViewItems, setInViewItems] = useState([]);
+const Timeline = () => {
+  const [timelineHeight, setTimelineHeight] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const windowDistance = window.scrollY;
-      const windowHeight = window.innerHeight / 2;
-      const timelineDistance = document.querySelector(".timeline").offsetTop;
+    const maxTimelineHeight =
+      (document.querySelectorAll(".my-container").length - 1) * 100;
+    setTimelineHeight(maxTimelineHeight);
+  }, []);
 
-      if (windowDistance >= timelineDistance - windowHeight) {
-        const line = windowDistance - timelineDistance + windowHeight;
+  const handleScroll = () => {
+    const scrollPercentage = (window.scrollY / timelineHeight) * 65;
+    const adjustedPercentage = Math.min(100, scrollPercentage);
 
-        if (line <= dottedLineHeight) {
-          setScrollPosition(line + 20);
-        }
-      }
+    document.querySelector(
+      ".timeline-line"
+    ).style.height = `${adjustedPercentage}%`;
+    document.querySelector(
+      ".timeline-image"
+    ).style.top = `${adjustedPercentage}%`;
+  };
 
-      // Update in-view items
-      const updatedInViewItems = cards.map((card, index) => {
-        const cardPosition = card.offsetTop;
-
-        return {
-          index,
-          inView: scrollPosition > cardPosition,
-        };
-      });
-
-      setInViewItems(updatedInViewItems);
-    };
-
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scrollPosition]);
-
-  const cards = document.querySelectorAll(".timeline-card");
+  }, [timelineHeight]);
 
   return (
-    <div className="timeline-container">
-      <div className="timeline-dotted-line"></div>
-      <div
-        className="timeline-animated-line"
-        style={{ height: `${scrollPosition}px` }}
-      ></div>
-      <ul>
-        {Array.from(cards).map((card, index) => (
-          <li
-            key={index}
-            className={inViewItems[index]?.inView ? "in-view" : ""}
-          >
-            <TimelineCard
-              time={card.dataset.time}
-              date={card.dataset.date}
-              title={card.dataset.title}
-              image={card.dataset.image}
-            />
-          </li>
-        ))}
-      </ul>
+    <div className="relative">
+      <div className="absolute w-2 translate-y-[25rem] h-[70rem] bg-white"></div>
+      <div className="lg:mx-96 mx-7 grid lg:grid-cols-3 grid-cols-2">
+        <div className="mx-auto col-span-3 lg:col-start-1 col-start-2 lg:p-20 pb-7">
+          <img src={timelinetitle} alt="" />
+        </div>
+        <div className="py-5 col-span-3 lg:col-start-1 col-start-3">
+          <TimelineCard
+            title="Neural Networks and Computer Vision"
+            time="05:30PM - 08:00PM"
+            date="4th January, 2024"
+            image={neuralnetworks}
+          />
+        </div>
+        <div className="py-5 col-span-3 col-start-3">
+          <TimelineCard
+            title="React Workshop"
+            time="05:30PM - 08:00PM"
+            date="4th January, 2024 - 5th January, 2024"
+            image={reactworkshop}
+          />
+        </div>
+        <div className="py-5 col-span-3 lg:col-start-1 col-start-3">
+          <TimelineCard
+            title="UI Design Workshop"
+            time="05:30PM - 08:00PM"
+            date="4th January, 2024"
+            image={reactworkshop}
+          />
+        </div>
+        <div className="py-5 col-span-3 col-start-3">
+          <TimelineCard
+            title="CSS Frameworks"
+            time="05:30PM - 08:00PM"
+            date="4th January, 2024"
+            image={reactworkshop}
+          />
+        </div>
+      </div>
     </div>
   );
 };
 
-export default TimelineAnimation;
+export default Timeline;

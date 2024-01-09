@@ -1,163 +1,102 @@
-
 import React, { useState } from "react";
-import hamburgerIcon from "../images/burger-menu-right-svgrepo-com.svg";
-import cancelIcon from "../images/cancel-svgrepo-com.svg";
-import cupIcon from "../images/cup.svg";
-import logo from "../images/Mask group.svg"
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+import "./nav.css"; // Import your CSS file
+import logo from "./images/Mask group.svg";
+import hamburgerIcon from "./images/burger-menu-right-svgrepo-com.svg";
+import cancelIcon from "./images/cancel-svgrepo-com.svg";
+import cupIcon from "./images/cup.svg";
+import rectangle from "./images/Rectangle 39.svg";
+const NavBar = () => {
+  const [isNavMenuActive, setNavMenuActive] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleHamburgerClick = () => {
+    setNavMenuActive(!isNavMenuActive);
   };
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
+  const handleNavItemClick = () => {
+    setNavMenuActive(false);
   };
-
-  const commonStyle = {
-    fontSize: "16px",
-    fontFamily: "Inter",
-    fontWeight: 500,
-    lineHeight: "24px",
-    wordWrap: "break-word",
-  };
-
-  const styles = {
-    home: {
-      color: "#338EF7",
-      ...commonStyle,
-    },
-    about: {
-      color: "white",
-      ...commonStyle,
-    },
-    partners: {
-      color: "white",
-      ...commonStyle,
-    },
-    timeline: {
-      color: "white",
-      ...commonStyle,
-    },
-    sponsors: {
-      color: "white",
-      ...commonStyle,
-    },
-    hackathon: {
-      color: "#006FEE",
-      ...commonStyle,
-    },
-    workshop: {
-      color: "#006FEE",
-      ...commonStyle,
-    },
-  };
-
   return (
-    <nav className={`flex-container p-4 ${isMenuOpen ? "nav-open" : ""}`}>
-      {logo}
-      <a href="#" className="col-2">
-       
-        {<img src={logo} alt="Aurora Logo" width="76px" height="93px" /> }
-      </a>
-
-      {/* Navigation Menu */}
-      <ul
-        className={`nav-menu ${isMenuOpen ? "active" : ""}`}
-        style={{ display: "flex" }}
-      >
-        <li className="nav-item">
-          <a href="#" style={styles.home}>
-            Home
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#" style={styles.about}>
-            About
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#" style={styles.partners}>
-            Partners
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#" style={styles.timeline}>
-            Timeline
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#" style={styles.sponsors}>
-            Sponsors
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#" style={styles.hackathon}>
-            Hackathon
-          </a>
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              justifyContent: "center",
-              alignItems: "center",
-              display: "inline-flex",
-            }}
-          >
-            {cupIcon}
-          </div>
-        </li>
-        <li className="nav-item">
-          <a href="#" style={styles.workshop}>
-            Workshop
-          </a>
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              justifyContent: "center",
-              alignItems: "center",
-              display: "inline-flex",
-            }}
-          >
-            {cupIcon}
-          </div>
-        </li>
-      </ul>
-
-      {/* Navigation Buttons */}
-      <div className={`nav-btns hidden md:flex ${isMenuOpen ? "hidden" : ""}`}>
-        <a href="#" style={styles.hackathon}>
-          Hackathon
+    <nav className="grid-container">
+      <div className="navbar">
+        <a href="#" className="logo">
+          <img src={logo} alt="aurora Logo" />
         </a>
-        <a href="#" style={styles.workshop} className="main-btns">
-          Workshops
-        </a>
-      </div>
 
-      {/* Hamburger */}
-      <div className="md:hidden">
-        {isMenuOpen ? (
-          <span className="hamburger" onClick={closeMenu}>
-            <img
-              src={cancelIcon}
-              alt="Cancel"
-              className="w-8 h-8 cursor-pointer active"
-            />
-          </span>
+        {isNavMenuActive ? (
+          <img
+            src={cancelIcon}
+            alt="cancel"
+            className="hamburger-img"
+            onClick={handleHamburgerClick}
+          />
         ) : (
-          <span className="hamburger" onClick={toggleMenu}>
-            <img
-              src={hamburgerIcon}
-              alt="Menu Toggle"
-              className={`w-8 h-8 cursor-pointer ${isMenuOpen ? "active" : ""}`}
-            />
-          </span>
+          <img
+            src={hamburgerIcon}
+            alt="Hamburger"
+            className="hamburger-img"
+            onClick={handleHamburgerClick}
+          />
         )}
+
+        <ul className={`nav-menu ${isNavMenuActive ? "active" : ""}`}>
+          <li className="nav-item">
+            <a href="#" onClick={handleNavItemClick}>
+              Home
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#" onClick={handleNavItemClick}>
+              About
+            </a>
+          </li>
+          <li className="nav-item" id="">
+            <a href="#" onClick={handleNavItemClick}>
+              Partners
+            </a>
+          </li>
+          <li className="nav-item" id="">
+            <a href="#" onClick={handleNavItemClick}>
+              Timeline
+            </a>
+          </li>
+          <li className="nav-item" id="">
+            <a href="#" onClick={handleNavItemClick}>
+              Sponsors
+            </a>
+          </li>
+          <li className="nav-item" id="assets">
+            <a href="#" onClick={handleNavItemClick}>
+              <div className="overlay-container">
+                <img
+                  src={rectangle}
+                  alt="hackathon"
+                  className="rectangle-image"
+                />
+                <img src={cupIcon} alt="workshop" className="cup-image" />
+                <div className="overlay-text">Hackathon</div>
+              </div>
+            </a>
+          </li>
+          <li className="nav-item" id="assets">
+            <a href="/workshops" onClick={handleNavItemClick}>
+              <div className="overlay-container">
+                <img
+                  src={rectangle}
+                  alt="hackathon"
+                  className="rectangle-image"
+                />
+                <img src={cupIcon} alt="workshop" className="cup-image" />
+              </div>
+              <div className="overlay-container">
+                <div className="overlay-text-wk">Workshops</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <Timeline setObserver={() => {}} callback={() => {}} />
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default NavBar;
