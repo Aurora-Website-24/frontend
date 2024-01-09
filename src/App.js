@@ -6,8 +6,6 @@ function App() {
   return (
     <div className="App">
       <MainPage/>
-      <Partners/>
-      <Gallery />
     </div>
   );
 }

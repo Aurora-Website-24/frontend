@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
 
 
 
@@ -14,8 +15,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+=======
+>>>>>>> e9d4a28e29cd2d8c20f9e654e06ca3f05bf5d6ad
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+body {
+    background-color: black;
+    /* background-color: hsl(204,56%,2%); */ /*this is tree forest color*/
+  }
