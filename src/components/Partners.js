@@ -8,8 +8,8 @@ import './Partners.css'
 
 import { Autoplay, Navigation} from 'swiper/modules';
 
-import Insta from './Instagram_icon.png'
-import Face from './Facebook_Logo_2023.png'
+import Insta from '../images/Instagram_icon.png'
+import Face from '../images/Facebook_Logo_2023.png'
 import Title_Stuff from './Title_Stuff';
 
 

@@ -6,11 +6,11 @@ import 'swiper/css/navigation';
 
 import './Gallery.css'
 
-import i1 from "./001.jpg";
-import i2 from "./002.jpg";
-import i3 from "./003.jpg";
-import i4 from "./004.jpg";
-import i5 from "./005.jpg";
+import i1 from "../images/001.jpg";
+import i2 from "../images/002.jpg";
+import i3 from "../images/003.jpg";
+import i4 from "../images/004.jpg";
+import i5 from "../images/005.jpg";
 
 import { Autoplay, Navigation} from 'swiper/modules';
 import Title_Stuff from './Title_Stuff';
