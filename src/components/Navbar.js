@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./nav.css"; // Import your CSS file
+import "../nav.css";
 import logo from "./images/Mask group.svg";
 import hamburgerIcon from "./images/burger-menu-right-svgrepo-com.svg";
 import cancelIcon from "./images/cancel-svgrepo-com.svg";

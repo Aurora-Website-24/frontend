@@ -1,0 +1,130 @@
+.navbar {
+  /* height: 60px; */
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 100px;
+}
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 30px;
+  color: black;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  padding-right: 58px;
+}
+
+.overlay-container {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 45%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: #006fee;
+  padding: 10px;
+  font-size: 1rem;
+
+  z-index: 1; /* Ensures the text is on top of the image */
+}
+
+.overlay-text-wk {
+  position: absolute;
+  top: 45%;
+  left: -50px;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: #006fee;
+  padding: 10px;
+  font-size: 0.95rem;
+
+  z-index: 1; /* Ensures the text is on top of the image */
+}
+
+.rectangle-image {
+  width: 120px; /* Adjust the width as needed */
+  height: 50px; /* Maintain aspect ratio */
+}
+.cup-image {
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  top: 12px;
+  left: 8px;
+}
+.hamburger-img {
+  display: none;
+}
+/* @media (max-width: 400px) {
+  .hamburger {
+    grid-column-start: 9;
+    grid-column-end: 9;
+  }
+
+  .nav-menu {
+    width: 300px;
+  }
+} */
+
+/* @media (min-width: 1200px) {
+  .grid-container {
+    align-items: center;
+    max-width: 1200px;
+    text-align: start;
+  }
+} */
+/* .nav-menu {
+  display: none;
+} */
+
+@media (max-width: 768px) {
+  .nav-menu {
+    /* display: none; */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .hamburger-img {
+    display: flex;
+    width: 40px;
+    cursor: pointer;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-item {
+    text-align: center;
+    padding: 10px;
+  }
+}
