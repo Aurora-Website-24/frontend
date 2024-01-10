@@ -1,5 +1,6 @@
 import { ArrowLeft } from "./icons/ArrowLeft"
-import { Cup } from "./icons/Cup"
+import { Button } from "@nextui-org/react"
+import trophycup from "../images/trophycup.svg"
 
 export const MainHackathon = () => {
     return(
@@ -15,17 +16,18 @@ export const MainHackathon = () => {
                 <div className="[text-shadow:0px_4px_37.2px_#8080d7] [font-family:'Inter-Bold',Helvetica] font-bold text-[#8080d7] md:text-[108px] text-[40px] tracking-[0] leading-[normal]">
                     &lt;DEVSPRINT’24 /&gt;
                 </div>
-                <p className="md:w-[846px] w-5/6 pt-8 pb-24 [font-family:'Inter-Medium',Helvetica] font-medium text-white md:text-[25px] text-[16px] text-center tracking-[0] leading-[normal]">
+                <p className="md:w-[846px] w-5/6 pt-8 pb-24 [font-family:'Inter-Medium',Helvetica] font-medium text-white md:text-[25px] text-[16px] text-center tracking-[0] leading-7]">
                     Our annual hackathon, Devsprint is back for the 2024 edition. It is an exciting learning opportunity for
                     students who are passionate about technology and are interested in solving real-world problems with cutting-edge
                     solutions. We&#39;re hoping to see much more innovative, improved and effective solutions to the issues at hand
                     and share them with the rest of the world by bringing back the community of student developers together yet
                     again.
                 </p>
-                <button className="bg-[#8080d7] p-4 rounded-3xl font-bold text-white flex text-2xl">
-                    <Cup  className="!relative !w-[36px] !h-[36px]" color="white" />
-                    <span className="p-2 pl-4">Register Now</span>
-                </button>
+                
+                <Button size="lg" className="bg-[#8080d7] flex p-6 pt-8 pb-8 rounded-3xl font-bold text-xl text-white hover:bg-purple-500 selection: border-4 border-purple-800">
+                        <img src={trophycup} alt="wtf" />
+                        <span className="pl-3">Register Now!</span>
+                </Button>
             </div>
         </div>
     )
