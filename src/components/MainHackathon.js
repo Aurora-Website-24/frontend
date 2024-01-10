@@ -3,7 +3,7 @@ import { Cup } from "./icons/Cup"
 
 export const MainHackathon = () => {
     return(
-        <div className="[font-family:'Inter-Regular',Helvetica] w-screen h-screen bg-gray-900">
+        <div className="snap-center [font-family:'Inter-Regular',Helvetica] w-screen h-screen bg-gray-900">
             <div className="flex w-screen h-24">
                 <ArrowLeft className={`fixed w-[66px] h-[66px] top-0 left-0`}/>
             </div>
