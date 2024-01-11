@@ -5,7 +5,7 @@ import CircularCountdown from "../components/CircleCountdown"
 import Footer from "../components/Footer"
 import Nav from "../components/Nav"
 import Partners from "../components/Partners"
-import Timeline from '../components/Timeline'
+import TimelineNew from "../components/TimelineNew"
 import Aurora from '../images/AURORA-24’.svg'
 import gallerytitle from '../images/gallerytitle.svg'
 import sponsorstitle from '../images/sponsorstitle.svg'
@@ -55,7 +55,7 @@ export default function MainPage() {
                 </ParallaxLayer>
                 <ParallaxLayer offset={3} speed={0.2}>
                     <div className="h-[130rem] bg-[hsl(204,56%,2%)] lg:mt-[-12rem] mt-[-10rem]" id="timeline"> {/*border-blue-700 border-solid border-3 - for checking*/}
-                        <Timeline/>
+                        <TimelineNew/>
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer offset={5} speed={0.2}>
