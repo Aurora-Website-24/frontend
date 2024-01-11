@@ -1,4 +1,4 @@
-export const ArrowLeft = ({ color = "#8080d7", className }) => {
+export const ArrowLeft = ({ color = "#0070f3", className }) => {
   return (
     <svg
       className={`${className}`}

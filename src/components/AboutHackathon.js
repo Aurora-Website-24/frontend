@@ -1,7 +1,7 @@
 export const AboutHackathon = () => {
     return (
-        <div className="snap-center [font-family:'Inter-Regular',Helvetica] w-screen h-screen bg-gray-900 flex flex-col items-center justify-center">
-            <div className="[text-shadow:0px_4px_37.2px_#8080d7] [font-family:'Inter-Bold',Helvetica] font-bold text-[#8080d7] md:text-[78px] text-[35px] tracking-[0] leading-[normal]">
+        <div className="snap-center [font-family:'Inter-Regular',Helvetica] w-screen bg-gray-900 flex flex-col items-center justify-center">
+            <div className="[text-shadow:0px_4px_37.2px_#0070f3] [font-family:'Inter-Bold',Helvetica] font-bold text-[#0070f3] md:text-[78px] text-[35px] tracking-[0] leading-[normal]">
                 <h1 className="text-center p-6">Rules </h1>
             </div>
             <ul className="text-white md:text-2xl text-xl flex-col p-6 justify-center w-2/3 list-disc my-5">

@@ -4,7 +4,8 @@ import trophycup from "../images/trophycup.svg"
 
 export const MainHackathon = () => {
     return(
-        <div className="snap-center [font-family:'Inter-Regular',Helvetica] w-screen h-screen bg-gray-900">
+        <div className="snap-center [font-family:'Inter-Regular',Helvetica] w-screen bg-gray-900">
+            <div className="z-50">
             <div className="flex w-screen h-24">
                 <ArrowLeft className={`fixed w-[66px] h-[66px] top-0 left-0`}/>
             </div>
@@ -13,7 +14,7 @@ export const MainHackathon = () => {
                 <div className="[text-shadow:0px_4px_53px_#00000073] [font-family:'Inter-Regular',Helvetica] font-normal text-white md:text-[27px] text-[16px] tracking-[0] leading-[normal]">
                     AURORA PRESENTS
                 </div>
-                <div className="[text-shadow:0px_4px_37.2px_#8080d7] [font-family:'Inter-Bold',Helvetica] font-bold text-[#8080d7] md:text-[108px] text-[40px] tracking-[0] leading-[normal]">
+                <div className="[text-shadow:0px_4px_37.2px_#0070f394] [font-family:'Inter-Bold',Helvetica] font-bold text-[#0070f3] md:text-[108px] text-[40px] tracking-[0] leading-[normal]">
                     &lt;DEVSPRINT’24 /&gt;
                 </div>
                 <p className="md:w-[846px] w-5/6 pt-8 pb-24 [font-family:'Inter-Medium',Helvetica] font-medium text-white md:text-[25px] text-[16px] text-center tracking-[0] leading-7]">
@@ -24,10 +25,11 @@ export const MainHackathon = () => {
                     again.
                 </p>
                 
-                <Button size="lg" className="bg-[#8080d7] flex p-6 pt-8 pb-8 rounded-3xl font-bold text-xl text-white hover:bg-purple-500 selection: border-4 border-purple-800">
+                <Button size="lg" className="bg-[#0070f3] flex p-6 pt-8 pb-8 rounded-3xl font-bold text-xl text-white">
                         <img src={trophycup} alt="wtf" />
                         <span className="pl-3">Register Now!</span>
                 </Button>
+            </div>
             </div>
         </div>
     )
