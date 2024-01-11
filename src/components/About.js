@@ -1,42 +1,36 @@
-import 'tailwindcss/tailwind.css' // This imports the full Tailwind CSS
+import 'tailwindcss/tailwind.css'
 
 function About() {
   return (
-    <div className="flex items-stretch w-full ">
-      <div className="h-[236px] flex-1 border text-center w-full">
-        <div className="flex items-center justify-center h-full px-9 bg-slate-900 rounded-[14px] shadow">
-          <div className="text-white text-5xl font-normal font-['Roboto'] leading-normal">
-            200+ Registrations
+    <div className="flex flex-col sm:flex-row w-screen items-center">
+      {/* First Column */}
+      <div className="sm:h-[236px] flex-1 border text-center w-full sm:w-1/3">
+        <div className="flex flex-col items-center justify-center h-full px-6 sm:px-9 bg-blue-600 shadow">
+          <div className="w-full max-w-[336px]">
+            <span className="text-white text-4xl sm:text-6xl font-bold">
+              200 +
+              <br />
+            </span>
+            <span className="text-2xl sm:text-3xl font-bold">
+              Registrations
+            </span>
           </div>
         </div>
       </div>
 
-      <div className=" h-[236px] flex-1 border text-center">
-        <span
-          style={{
-            color: 'white',
-            fontSize: '94.20px',
-            fontWeight: 'bold',
-            fontFamily: 'Roboto Serif',
-          }}
-        >
+      {/* Second Column */}
+      <div className="sm:h-[236px] flex-1 border text-center bg-sky-700 flex flex-col items-center justify-center">
+        <span className="text-white text-4xl sm:text-6xl font-bold">
           8+
           <br />
         </span>
-        <span
-          style={{
-            color: 'white',
-            fontSize: '40px',
-            fontWeight: 'bold',
-            fontFamily: 'Roboto Serif',
-          }}
-        >
-          Workshops
-        </span>
+        <span className="text-2xl sm:text-3xl font-bold">Workshops</span>
       </div>
-      <div className=" h-[236px] text-white text-6xl font-bold font-['Roboto Serif'] flex-1 border text-center bg-zinc-800">
+
+      {/* Third Column */}
+      <div className="sm:h-[236px] text-white text-4xl sm:text-6xl font-bold flex-1 border text-center bg-sky-950 flex flex-col items-center justify-center">
         <br />
-        learnings++
+        <span className="text-6xl font-bold">learnings++</span>
       </div>
     </div>
   )
