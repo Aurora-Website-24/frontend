@@ -4,9 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import './Partners.css'
 
-import { Autoplay, Navigation} from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 
 import P1 from "../images/partners_1.svg"
 import P2 from "../images/partners_2.svg"
