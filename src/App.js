@@ -3,6 +3,8 @@ import './App.css';
 import Login from './pages/Login';
 import MainPage from './pages/MainPage';
 import HackathonPage from './pages/HackathonPage';
+import Partners from './components/Partners'
+import Gallery from './components/Gallery';
 function App() {
 
   const router = createBrowserRouter([
@@ -64,7 +66,9 @@ function App() {
 
   return (
     <div className="App">
+
       <RouterProvider router={router} />
+
     </div>
   );
 }
