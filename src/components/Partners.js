@@ -15,12 +15,23 @@ import Title_Stuff from './Title_Stuff';
 
 const Carousel = () => {
   const handleSlideChange = (swiper) => {
-    console.log("Bro wtf")
+    
     const currentIndex = swiper.activeIndex;
+
+    swiper.slides.forEach((slide) => {
+      slide.classList.remove('swiper-slide-active-glow');
+      slide.style.transform = 'scale(0.5)';
+    });
+
+    if (swiper.slides[currentIndex]) {
+      swiper.slides[currentIndex].classList.add('swiper-slide-active-glow');
+      swiper.slides[currentIndex].style.transform = 'scale(1)';
+    }
     
     swiper.slides.forEach((slide) => {
       slide.style.transform = 'scale(0.5)';
     });
+
     if (swiper.slides[currentIndex]) {
       swiper.slides[currentIndex].style.transform = 'scale(1)';
     }
@@ -49,7 +60,7 @@ const Carousel = () => {
   return(
   <div className="w-full overflow-hidden">
     <Swiper
-      className='mySwiper'
+      className='mySwiper p-6'
       modules={[Navigation, Autoplay]}
       grabCursor={true}
       centeredSlides={true}
@@ -91,13 +102,16 @@ const Carousel = () => {
           </svg>
         </div>
     {images.map((image, index) => (
-      <SwiperSlide key={index} className="w-full h-auto">
+      <SwiperSlide key={index} className="w-full h-fit">
+        <div className="rounded-3xl p-2">
         <img 
           src={image} 
-          className={`w-full h-auto m-auto rounded-xl object-cover p-4`}
+          className={`w-full h-auto m-auto rounded-3xl object-cover`}
           alt={`Slide ${index}`}
         />
+        </div>
       </SwiperSlide>
+      
     ))}
   </Swiper>
   </div>
@@ -107,7 +121,7 @@ const Carousel = () => {
 function Partners(){
     return (
       <div className="text-white">
-        <div className="p-8">
+        <div className="p-2">
           <Title_Stuff name="partners" />
         </div>
         <Carousel />

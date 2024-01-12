@@ -58,3 +58,10 @@
     padding-top: 15%;
   }
 } */
+
+/*hackathon*/
+#mountainhack{
+  background-image: url(./images/hackathonpage.svg);
+  background-size: 100%;
+  width: 100vh
+}
