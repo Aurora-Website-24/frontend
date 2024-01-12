@@ -1,6 +1,5 @@
 import { Button } from "@nextui-org/react"
 import { Parallax, ParallaxLayer } from "@react-spring/parallax"
-import { scroll } from 'framer-motion'
 import About from "../components/About"
 import CircularCountdown from "../components/CircleCountdown"
 import Footer from "../components/Footer"
@@ -11,14 +10,13 @@ import Sponsors from "../components/Sponsors"
 import TimelineNew from "../components/TimelineNew"
 import Aurora from '../images/AURORA-24’.svg'
 import sponsorstitle from '../images/sponsorstitle.svg'
-import trophycup from '../images/trophycup.svg'
+import trophycup from '../images/whitetrophy.svg'
 
 export default function MainPage() {
-    scroll(progress => console.log(progress))
 
     return (
         <div className="main-page-container">
-            <Parallax pages={7} style={{ top: '0', left: '0' }} className="animation block">
+            <Parallax pages={9} style={{ top: '0', left: '0' }} className="animation block">
 
                 <ParallaxLayer offset={0} speed={0.1} id="#home">
                     <div className="animation_layer parallax text-white flex-col text-center" id="artback">
@@ -40,7 +38,7 @@ export default function MainPage() {
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer offset={0} speed={0.01}>
-                    <div className="animation_layer parallax h-[10rem] p-6" id="text">
+                    <div className="animation_layer parallax h-[10rem] p-4" id="text">
                         <NavBar/>
                     </div>
                 </ParallaxLayer>
@@ -51,25 +49,25 @@ export default function MainPage() {
                         <Partners id="partners"/>
                     </div>
                 </ParallaxLayer>
-                <ParallaxLayer offset={2} speed={0.20} id="partners">
+                <ParallaxLayer offset={3} speed={0.20} id="partners">
                     <div className='h-[130rem] bg-[hsl(204,56%,2%)]' id="sponsor">
                         <Gallery/>
 
                         {/* <div><img src={gallerytitle} alt="" className="mx-auto" /></div> */}
                     </div>
                 </ParallaxLayer>
-                <ParallaxLayer offset={3} speed={0.2}>
-                    <div className="h-[150rem] bg-[hsl(204,56%,2%)] lg:mt-[-12rem] mt-[-10rem]" id="timeline"> {/*border-blue-700 border-solid border-3 - for checking*/}
+                <ParallaxLayer offset={4} speed={0.2}>
+                    <div className="h-[190rem] bg-[hsl(204,56%,2%)] lg:mt-[-12rem] mt-[-10rem]" id="timeline"> {/*border-blue-700 border-solid border-3 - for checking*/}
                         <TimelineNew/>
                     </div>
                 </ParallaxLayer>
-                <ParallaxLayer offset={5} speed={0.2}>
+                <ParallaxLayer offset={7} speed={0.2}>
                     <div className="h-[130rem] bg-[hsl(204,56%,2%)] lg:mt-[-12rem] mt-[-10rem]" id="sponsor"> {/*border-blue-700 border-solid border-3 - for checking*/}
                         <img src={sponsorstitle} alt="" className="mx-auto" />
                         <Sponsors/>
                     </div>
                 </ParallaxLayer>
-                <ParallaxLayer offset={6} speed={0.2}>
+                <ParallaxLayer offset={8} speed={0.2}>
                     <div className="h-[130rem] bg-[hsl(204,56%,2%)]" id="footer">
                         <Footer />
                     </div>

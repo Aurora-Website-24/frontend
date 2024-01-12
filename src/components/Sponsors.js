@@ -8,13 +8,13 @@ import trigger from '../images/trigger.svg'
 
 export default function Sponsors() {
   return (
-    <div className='grid lg:grid-cols-3 lg:mx-80'>
-      <img src={mcd} alt="" className='w-full'/>
-      <img src={kevin} alt="" />
-      <img src={trigger} alt="" />
-      <img src={heaven} alt="" />
-      <img src={growthschool} alt="" />
-      <img src={bugbase} alt="" />
+    <div className='grid lg:grid-cols-3 gap-4 lg:mx-80 justify-center p-5'>
+      <img src={mcd} alt="" className='lg:w-full w-[8rem]'/>
+      <img src={kevin} alt="" className='lg:w-full w-[8rem]'/>
+      <img src={trigger} alt="" className='lg:w-full w-[8rem]'/>
+      <img src={heaven} alt="" className='lg:w-full w-[8rem]'/>
+      <img src={growthschool} alt="" className='lg:w-full w-[8rem]'/>
+      <img src={bugbase} alt="" className='lg:w-full w-[8rem]'/>
     </div>
   )
 }
