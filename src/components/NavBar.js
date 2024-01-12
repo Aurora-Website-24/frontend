@@ -29,7 +29,7 @@ export default function NavBar() {
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem className="flex">
-                    <Link to='/hackthon' className="lg:w-fit w-[15rem] p-0">
+                    <Link to='/auth/google/callback' className="lg:w-fit w-[15rem] p-0">
                         <img src={HackathonBtn} alt="" />
                     </Link>
                     <Link to='/hackthon' className="w-fit p-0">
