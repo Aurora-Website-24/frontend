@@ -8,10 +8,13 @@ import './Partners.css'
 
 import { Autoplay, Navigation} from 'swiper/modules';
 
-import Insta from '../images/Instagram_icon.png'
-import Face from '../images/Facebook_Logo_2023.png'
-import Title_Stuff from './Title_Stuff';
+import P1 from "../images/partners_1.svg"
+import P2 from "../images/partners_2.svg"
+import P3 from "../images/partners_3.svg"
+import P4 from "../images/partners_4.svg"
+import P5 from "../images/partners_5.svg"
 
+import Title_Stuff from './Title_Stuff';
 
 const Carousel = () => {
   const handleSlideChange = (swiper) => {
@@ -37,16 +40,16 @@ const Carousel = () => {
     }
 
     if (swiper.slides[currentIndex - 2]) {
-      swiper.slides[currentIndex - 2].style.transform = 'scale(0.5)';
+      swiper.slides[currentIndex - 2].style.transform = 'scale(0.3)';
     }
     if (swiper.slides[currentIndex + 2]) {
-      swiper.slides[currentIndex + 2].style.transform = 'scale(0.5)';
+      swiper.slides[currentIndex + 2].style.transform = 'scale(0.3)';
     }
     if (swiper.slides[currentIndex + 1]) {
-      swiper.slides[currentIndex + 1].style.transform = 'scale(0.75)';
+      swiper.slides[currentIndex + 1].style.transform = 'scale(0.55)';
     }
     if (swiper.slides[currentIndex - 1]) {
-      swiper.slides[currentIndex - 1].style.transform = 'scale(0.75)';
+      swiper.slides[currentIndex - 1].style.transform = 'scale(0.55)';
     }
     if (swiper.slides[currentIndex - 3]) {
       swiper.slides[currentIndex - 3].style.transform = 'scale(0.1)';
@@ -56,7 +59,7 @@ const Carousel = () => {
     }
   }
 
-  const images = [Face, Insta, Face, Face, Insta, Face, Insta, Face, Insta, Face];
+  const images = [P1, P2, P3, P4, P5, P1, P2, P3, P4, P5];
   return(
   <div className="w-full overflow-hidden">
     <Swiper
@@ -103,13 +106,11 @@ const Carousel = () => {
         </div>
     {images.map((image, index) => (
       <SwiperSlide key={index} className="w-full h-fit">
-        <div className="rounded-3xl p-2">
         <img 
           src={image} 
-          className={`w-full h-auto m-auto rounded-3xl object-cover`}
+          className={`w-full h-full flex justify-center items-center object-cover`}
           alt={`Slide ${index}`}
         />
-        </div>
       </SwiperSlide>
       
     ))}

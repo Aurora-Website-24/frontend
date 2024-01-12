@@ -11,11 +11,13 @@ function HackathonPage() {
             <Parallax pages={4} className="bg-black">
                 
                 <ParallaxLayer offset={0} speed={1.5}>
-                    <img className="h-screen w-screen justify-center items-center flex translate-y-[20rem]" src={Sun}></img>
+                    <div  className="h-screen w-screen justify-center items-center flex lg:translate-y-[20rem] translate-y-[5rem]">
+                    <img className ="lg:h-screen lg:w-screen" src={Sun}></img>
+                    </div>
                 </ParallaxLayer>
 
                 <ParallaxLayer offset={0} speed={-0.001} className="w-screen">
-                    <img className="w-[150rem] bottom-0 lg:translate-y-[10rem]" src={Mountain}></img>
+                    <img className="w-[150rem] bottom-0 lg:translate-y-[10rem] translate-y-96" src={Mountain}></img>
                 </ParallaxLayer>
 
                 <ParallaxLayer offset={0} className="z-50" speed={0.1}>
