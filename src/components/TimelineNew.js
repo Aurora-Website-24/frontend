@@ -1,7 +1,7 @@
 import React from "react";
 import {
-    VerticalTimeline,
-    VerticalTimelineElement,
+  VerticalTimeline,
+  VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import neuralnetworks from "../images/neuralnetworks.png";
@@ -34,7 +34,7 @@ export default function TimelineNew(){
         <div>
           <h2 className="vertical-timeline-element-title">05:30PM - 08:00PM</h2>
           <h2>4th January, 2024</h2>
-          <h4 className="vertical-timeline-element-subtitle"></h4>
+          <h4 className="vertical-timeline-element-subtitle">?</h4>
           <h4 style={{ color: "#000" }}>Neural Networks And Computer Vision</h4>
           <img
             src={neuralnetworks}
@@ -63,7 +63,7 @@ export default function TimelineNew(){
         <div>
           <h2 className="vertical-timeline-element-title">05:30PM - 08:00PM</h2>
           <h2>4th January, 2024</h2>
-          <h4 className="vertical-timeline-element-subtitle"></h4>
+          <h4 className="vertical-timeline-element-subtitle">?</h4>
           <h4 style={{ color: "#000" }}>Neural Networks And Computer Vision</h4>
           <img
             src={neuralnetworks}
@@ -92,7 +92,7 @@ export default function TimelineNew(){
         <div>
           <h2 className="vertical-timeline-element-title">05:30PM - 08:00PM</h2>
           <h2>4th January, 2024</h2>
-          <h4 className="vertical-timeline-element-subtitle"></h4>
+          <h4 className="vertical-timeline-element-subtitle">?</h4>
           <h4 style={{ color: "#000" }}>Neural Networks And Computer Vision</h4>
           <img
             src={neuralnetworks}
