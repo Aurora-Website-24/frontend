@@ -4,11 +4,12 @@ import { scroll } from 'framer-motion'
 import About from "../components/About"
 import CircularCountdown from "../components/CircleCountdown"
 import Footer from "../components/Footer"
+import Gallery from '../components/Gallery'
 import NavBar from "../components/NavBar"
 import Partners from "../components/Partners"
+import Sponsors from "../components/Sponsors"
 import TimelineNew from "../components/TimelineNew"
 import Aurora from '../images/AURORA-24’.svg'
-import gallerytitle from '../images/gallerytitle.svg'
 import sponsorstitle from '../images/sponsorstitle.svg'
 import trophycup from '../images/trophycup.svg'
 
@@ -24,7 +25,7 @@ export default function MainPage() {
                         <img src={Aurora} alt="" className="m-auto translate-y-72 h-auto lg:w-[50rem] w-[15rem]" />
                     </div>
                 </ParallaxLayer>
-                <ParallaxLayer offset={0} speed={0.4} factor={2}>
+                <ParallaxLayer offset={0} speed={0.8} factor={2}>
                     <div className="animation_layer parallax lg:mt-40 mt-16" id="mountain"></div>
                 </ParallaxLayer>
                 <ParallaxLayer offset={0} speed={0.2}>
@@ -52,8 +53,9 @@ export default function MainPage() {
                 </ParallaxLayer>
                 <ParallaxLayer offset={2} speed={0.20} id="partners">
                     <div className='h-[130rem] bg-[hsl(204,56%,2%)]' id="sponsor">
+                        <Gallery/>
 
-                        <div><img src={gallerytitle} alt="" className="mx-auto" /></div>
+                        {/* <div><img src={gallerytitle} alt="" className="mx-auto" /></div> */}
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer offset={3} speed={0.2}>
@@ -64,6 +66,7 @@ export default function MainPage() {
                 <ParallaxLayer offset={5} speed={0.2}>
                     <div className="h-[130rem] bg-[hsl(204,56%,2%)] lg:mt-[-12rem] mt-[-10rem]" id="sponsor"> {/*border-blue-700 border-solid border-3 - for checking*/}
                         <img src={sponsorstitle} alt="" className="mx-auto" />
+                        <Sponsors/>
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer offset={6} speed={0.2}>
