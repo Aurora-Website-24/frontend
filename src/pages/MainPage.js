@@ -9,7 +9,7 @@ import Aurora from '../images/AURORA-24’.svg'
 import gallerytitle from '../images/gallerytitle.svg'
 import sponsorstitle from '../images/sponsorstitle.svg'
 import trophycup from '../images/trophycup.svg'
-
+import NewTimeLine from "../components/NewTimeLine"
 export default function MainPage() {
     return (
         <div className="main-page-container">
@@ -53,12 +53,17 @@ export default function MainPage() {
                 </ParallaxLayer>
                 <ParallaxLayer offset={3} speed={0.2}>
                     <div className="h-[130rem] bg-[hsl(204,56%,2%)] lg:mt-[-12rem] mt-[-10rem]" id="timeline"> {/*border-blue-700 border-solid border-3 - for checking*/}
-                        <Timeline/>
+                        <NewTimeLine/>
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer offset={5} speed={0.2}>
                     <div className="h-[75rem] bg-[hsl(204,56%,2%)] lg:mt-[-12rem] mt-[-10rem]" id="sponsor"> {/*border-blue-700 border-solid border-3 - for checking*/}
                         <img src={sponsorstitle} alt="" className="mx-auto" />
+                    </div>
+                </ParallaxLayer>
+                <ParallaxLayer offset={6} speed={0.2}>
+                    <div className="h-[75rem] bg-[hsl(204,56%,2%)]" id="footer">
+                        <Footer />
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer offset={6} speed={0.2}>
