@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import Login from './pages/Login';
 import MainPage from './pages/MainPage';
-
+import HackathonPage from './pages/HackathonPage';
 function App() {
 
   const router = createBrowserRouter([

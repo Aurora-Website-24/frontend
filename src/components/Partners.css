@@ -1,0 +1,27 @@
+.mySwiper .swiper-slide {
+    transition: transform 0.3s ease; 
+  }
+
+  .mySwiper .swiper-slide-prev {
+    transform: scale(0.75); 
+  }
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) { 
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+
+
+
+
+  
