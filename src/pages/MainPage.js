@@ -45,20 +45,20 @@ export default function MainPage() {
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer offset={1} speed={0.20} >
-                    <div className='h-[130rem] bg-[hsl(204,56%,2%)]' id="about">
+                    <div className='h-auto bg-[hsl(204,56%,2%)]' id="about">
                         <About />
                         <CircularCountdown/>
                         <Partners id="partners"/>
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer offset={2} speed={0.20} id="partners">
-                    <div className='h-[130rem] bg-[hsl(204,56%,2%)]' id="sponsor">
+                    <div className='h-[130rem]  translate-y-32 bg-[hsl(204,56%,2%)]' id="sponsor">
                         <Gallery/>
 
                         {/* <div><img src={gallerytitle} alt="" className="mx-auto" /></div> */}
                     </div>
                 </ParallaxLayer>
-                <ParallaxLayer offset={3} speed={0.2}>
+                <ParallaxLayer offset={4} speed={0.2}>
                     <div className="h-[150rem] bg-[hsl(204,56%,2%)] lg:mt-[-12rem] mt-[-10rem]" id="timeline"> {/*border-blue-700 border-solid border-3 - for checking*/}
                         <TimelineNew/>
                     </div>

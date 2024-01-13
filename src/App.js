@@ -62,13 +62,22 @@ function App() {
       ),
     },
 
+    {
+      path: '/hackathon',
+      element: (
+        <>
+          <HackathonPage />
+        </>
+      ),
+    },
+
   ]);
 
   return (
     <div className="App">
 
       <RouterProvider router={router} />
-
+      
     </div>
   );
 }
