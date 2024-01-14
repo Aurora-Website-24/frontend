@@ -7,10 +7,12 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import neuralnetworks from "../images/neuralnetworks.png";
 import trophycup from '../images/whitetrophy.svg';
+import TitleStuff from './Title_Stuff';
 
 const TimelineNew = () => {
   return (
     <div>
+      <TitleStuff name="timeline"/>
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"

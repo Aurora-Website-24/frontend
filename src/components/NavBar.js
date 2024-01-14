@@ -8,7 +8,7 @@ export default function NavBar() {
     return (
         <Navbar position="static" className="bg-[none]" isBlurred='false'>
             <NavbarBrand>
-                <img src={Logo} alt="" className="lg:w-[6rem] w-[4rem] relative lg:left-0 left-4" />
+                <img src={Logo} alt="" className="lg:w-[4rem] w-[4rem] relative lg:left-[-6rem] left-4" />
             </NavbarBrand>
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 {/* <NavbarItem>
@@ -27,14 +27,9 @@ export default function NavBar() {
                     </Link>
                 </NavbarItem> */}
             </NavbarContent>
-            <NavbarContent justify="end" className="">
+            <NavbarContent justify="end" className="relative lg:left-[6rem]">
                 <NavbarItem>
-                    <Link to='/auth/google/callback' className="relative left-10 text-[#006FEE] lg:text-lg text-xs font-medium">
-                        Login
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link to='/hackthon' className="lg:w-[12rem] w-[8rem] p-0">
+                    <Link to='/hackathon' className="lg:w-[12rem] w-[8rem] p-0 relative lg:left-[3rem] left-[4rem]">
                         {/* <img src={HackathonBtn} alt="" /> */}
 
                         <div className="hackathonbtn lg:w-[8.5rem]  w-[6.2rem] lg:text-lg text-[12px] shadow-2xl font-medium h-fit flex justify-between bg-[#000419] text-[#006FEE] rounded-lg p-2">
@@ -42,6 +37,14 @@ export default function NavBar() {
                             Hackathon
                         </div>
                     </Link>
+                </NavbarItem>
+                <NavbarItem>
+                    <Link to='/auth/google/callback' className="relative lg:left-0 left-[1rem] text-[#006FEE] lg:text-lg text-xs font-medium">
+                        Login
+                    </Link>
+                    {/* <Link to='/auth/google/callback' className="relative left-10 text-[red] lg:text-lg text-[0.7rem] font-medium">
+                        Logout
+                    </Link> */}
                 </NavbarItem>
             </NavbarContent>
         </Navbar>

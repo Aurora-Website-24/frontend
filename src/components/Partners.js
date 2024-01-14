@@ -8,13 +8,13 @@ import './Partners.css';
 
 import { Autoplay, Navigation } from 'swiper/modules';
 
-import P1 from "../images/partners_1.svg"
-import P2 from "../images/partners_2.svg"
-import P3 from "../images/partners_3.svg"
-import P4 from "../images/partners_4.svg"
-import P5 from "../images/partners_5.svg"
+import P1 from "../images/gallery1.svg";
+import P2 from "../images/gallery2.svg";
+import P3 from "../images/gallery3.svg";
+import P4 from "../images/gallery4.svg";
+import P5 from "../images/gallery5.svg";
 
-import Title_Stuff from './Title_Stuff';
+import TitleStuff from './Title_Stuff';
 
 const Carousel = () => {
   const handleSlideChange = (swiper) => {
@@ -61,9 +61,9 @@ const Carousel = () => {
 
   const images = [P1, P2, P3, P4, P5, P1, P2, P3, P4, P5];
   return(
-  <div className="w-full overflow-hidden">
+  <div className="w-full overflow-hidden pt-20">
     <Swiper
-      className='mySwiper p-6'
+      className='mySwiper p-20'
       modules={[Navigation, Autoplay]}
       grabCursor={true}
       centeredSlides={true}
@@ -123,7 +123,7 @@ function Partners(){
     return (
       <div className="text-white">
         <div className="p-2">
-          <Title_Stuff name="partners" />
+          <TitleStuff name="partners"/>
         </div>
         <Carousel />
       </div>

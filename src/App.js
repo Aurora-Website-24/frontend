@@ -1,10 +1,8 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
-import Login from './pages/Login';
-import MainPage from './pages/MainPage';
 import HackathonPage from './pages/HackathonPage';
-import Partners from './components/Partners'
-import Gallery from './components/Gallery';
+import Login from './pages/Login';
+import RegisterForm from './pages/RegisterForm';
 function App() {
 
   const router = createBrowserRouter([
@@ -12,7 +10,8 @@ function App() {
       path: '/',
       element: (
         <>
-          <MainPage/>
+          {/* <MainPage/> */}
+          <RegisterForm/>
         </>
       ),
     },
@@ -49,6 +48,15 @@ function App() {
       element: (
         <>
           {/* <HackathonRegistration /> */}
+        </>
+      ),
+    },
+
+    {
+      path: '/hackathon',
+      element: (
+        <>
+          <HackathonPage/>
         </>
       ),
     },
