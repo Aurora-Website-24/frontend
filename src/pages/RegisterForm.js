@@ -54,27 +54,26 @@ export default function RegisterForm() {
         })
     }
     return (
-        <div className="lg:grid grid-cols-5  w-screen" style={{ height: '100vh', overflowY: 'auto', overflowX: 'hidden' }}>
-            <div className="row-span-5 w-full col-span-2 lg:block hidden">
-                <div className="w-[590px] h-[1844px] left-[-3px] top-0 absolute bg-gradient-to-br from-blue-500 to-blue-500 rounded-tr-[72.74px] rounded-br-[72.74px] border border-white border-opacity-10" />
-                <div className="left-[70px] top-[233px] absolute text-blue-600 text-5xl font-bold font-['Inter'] uppercase">
+        <div className="lg:grid lg:grid-cols-2 flex-col" style={{ height: '100vh', overflowY: 'auto', overflowX: 'hidden' }}>
+            <div className="row-span-5 block w-[590px] left-[-3px] bg-gradient-to-br from-blue-500 to-blue-500 rounded-tr-[72.74px] rounded-br-[72.74px] border border-white border-opacity-10">
+                <div className="left-[70px] top-[233px] text-blue-600 text-5xl font-bold font-['Inter'] uppercase">
                     DEVSPRINT’24{' '}
                 </div>
-                <div className="w-[427px] h-[135px] left-[70px] top-[366px] absolute">
-                    <div className="left-[40px] top-[0.70px] absolute text-center text-white text-[25.26px] font-medium font-['Inter']">
+                <div className="w-[427px] h-[135px] left-[70px] top-[366px] ">
+                    <div className="left-[40px] top-[0.70px]  text-center text-[25.26px] font-medium font-['Inter']">
                         02 February 2024
                     </div>
-                    <div className="left-[40px] top-[53.56px] absolute text-center text-white text-[25.26px] font-medium font-['Inter']">
+                    <div className="left-[40px] top-[53.56px]  text-centertext-[25.26px] font-medium font-['Inter']">
                         12:30 PM
                     </div>
-                    <div className="w-[387px] left-[40px] top-[104px] absolute text-white text-[25.26px] font-medium font-['Inter']">
+                    <div className="w-[387px] left-[40px] top-[104px] text-[25.26px] font-medium font-['Inter']">
                         Library Auditorium, MIT Manipal{' '}
                     </div> 
                 </div>
 
             </div>
 
-            <div className="grid-rows-4 grid-cols-2  col-span-3 bg-[#000F21]">
+            <div className="grid-rows-4 grid-cols-2  bg-[#000F21]">
                 <div className="grid col-span-2 grid-rows-2 pl-14 pt-24">
                     <div className="text-[40px] font-normal font-['Inter'] leading-normal text-blue-500 p">
                         Registration Form
