@@ -1,8 +1,6 @@
 import React from 'react'
 import Countdown from 'react-countdown'
 
-import './styles.css'
-
 const CircularCountdown = ({ value, label }) => {
   return (
     <div className="circular-countdown">
@@ -12,7 +10,7 @@ const CircularCountdown = ({ value, label }) => {
   )
 }
 
-const App = () => {
+export default function App(){
   const targetDate = new Date('2024-02-03T00:00:00')
 
   // Calculate the remaining time in milliseconds
@@ -58,7 +56,7 @@ const App = () => {
   )
 }
 
-export default App
+
 
 // import React from 'react'
 // import Countdown from 'react-countdown'

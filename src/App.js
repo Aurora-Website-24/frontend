@@ -1,29 +1,84 @@
-import './App.css'
-import MainPage from './pages/MainPage'
-import Partners from './components/Partners'
-import About from './components/About'
-import CircleCountdown from './components/CircleCountdown'
-import Test from './components/Test'
-import HackForm from './components/HackForm'
-import HackathonForm from './components/HackathonForm'
-import { NextUIProvider } from '@nextui-org/react'
-import test1 from './components/test1'
-import Test1 from './components/test1'
-import HackathonForm2 from './components/HackathonForm2'
-
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import './App.css';
+import HackathonPage from './pages/HackathonPage';
+import Login from './pages/Login';
+import RegisterForm from './pages/RegisterForm';
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: (
+        <>
+          {/* <MainPage/> */}
+          <RegisterForm/>
+        </>
+      ),
+    },
+
+    {
+      path: '/login',
+      element: (
+        <>
+          <Login/>
+        </>
+      ),
+    },
+
+    {
+      path: '/register',
+      element: (
+        <>
+          <Login/>
+        </>
+      ),
+    },
+
+    {
+      path: '/registration-form',
+      element: (
+        <>
+          {/* <Register /> */}
+        </>
+      ),
+    },
+
+    {
+      path: '/hackathon-registration',
+      element: (
+        <>
+          {/* <HackathonRegistration /> */}
+        </>
+      ),
+    },
+
+    {
+      path: '/hackathon',
+      element: (
+        <>
+          <HackathonPage/>
+        </>
+      ),
+    },
+
+    {
+      path: '/*',
+      element: (
+        <>
+          {/* <Error /> */}
+        </>
+      ),
+    },
+
+  ]);
+
   return (
-    <div className="App overflow-auto h-screen">
-      {/* <About />
-      <CircleCountdown /> */}
-      {/* <HackForm /> */}
+    <div className="App">
 
-      <HackathonForm />
-      {/* <Test1 /> */}
+      <RouterProvider router={router} />
 
-      {/* <Test /> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
