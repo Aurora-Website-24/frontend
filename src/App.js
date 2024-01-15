@@ -1,10 +1,10 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
-import Login from './pages/Login';
-import MainPage from './pages/MainPage';
 import HackathonPage from './pages/HackathonPage';
-import Partners from './components/Partners'
-import Gallery from './components/Gallery';
+import MainPage from './pages/MainPage';
+import Login from './pages/Login';
+import RegisterForm from './pages/RegisterForm';
+import HackathonForm from './pages/HackathonForm'
 function App() {
 
   const router = createBrowserRouter([
@@ -12,7 +12,8 @@ function App() {
       path: '/',
       element: (
         <>
-          <MainPage/>
+        <MainPage/> 
+
         </>
       ),
     },
@@ -39,7 +40,7 @@ function App() {
       path: '/registration-form',
       element: (
         <>
-          {/* <Register /> */}
+                    <RegisterForm/>
         </>
       ),
     },
@@ -48,7 +49,16 @@ function App() {
       path: '/hackathon-registration',
       element: (
         <>
-          {/* <HackathonRegistration /> */}
+          <HackathonForm />
+        </>
+      ),
+    },
+
+    {
+      path: '/hackathon',
+      element: (
+        <>
+          <HackathonPage/>
         </>
       ),
     },
