@@ -8,32 +8,24 @@ import "react-vertical-timeline-component/style.min.css";
 import neuralnetworks from "../images/neuralnetworks.png";
 
 import trophycup from "../images/whitetrophy.svg";
-import Modal from "./Modal";
+import Modal_1 from "./Modal_1";
+import Modal_2 from "./Modal_2";
 import { useInView } from "react-intersection-observer";
 import Confetti from "./Confetti";
 
 const TimelineNew = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen_1, setIsModalOpen_1] = useState(false);
+  const [isModalOpen_2, setIsModalOpen_2] = useState(false);
   const [confettiActive, setConfettiActive] = useState(false);
   const [ref, inView] = useInView();
   const confettiRef = useRef();
 
-  useEffect(() => {
-    // Add or remove the "modal-open" class on the body based on the modal state
-    document.body.classList.toggle("modal-open", isModalOpen);
 
-    // Cleanup the class when the component unmounts
-    return () => {
-      document.body.classList.remove("modal-open");
-    };
-  }, [isModalOpen]);
-
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
+  const toggleModal_1 = () => {
+    setIsModalOpen_1(!isModalOpen_1);
   };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const toggleModal_2 = () => {
+    setIsModalOpen_2(!isModalOpen_2);
   };
 
   useEffect(() => {
@@ -51,15 +43,15 @@ const TimelineNew = () => {
 
     <div
       className={`fixed inset-0 z-[9998] ${
-        isModalOpen ? "backdrop-blur-lg" : ""
+        isModalOpen_1 ? "backdrop-blur-lg" : ""
       }`}
-      onClick={toggleModal}
+      onClick={toggleModal_1}
     >
       <div>
         {/* <VerticalTimeline onTimelineEnd={handleTimelineEnd}> */}
-        <VerticalTimeline>
+        <VerticalTimeline className="">
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            className="vertical-timeline-element--work relative"
             contentStyle={{
               background: "#fff",
               color: "#fff",
@@ -78,7 +70,7 @@ const TimelineNew = () => {
               >
                 Neural Networks And Computer Vision
                 <p>
-                  <button onClick={toggleModal} className="read-more-button">
+                  <button onClick={toggleModal_1} className="read-more-button">
                     Read More
                   </button>
                 </p>
@@ -105,10 +97,10 @@ const TimelineNew = () => {
                 style={{ width: "fit-content", height: "auto" }}
               />
             </div>
-            <Modal toggleModal={isModalOpen} />
+            <Modal_1 toggleModal={isModalOpen_1} />
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            className="vertical-timeline-element--work relative"
             contentStyle={{
               background: "#fff",
               color: "#fff",
@@ -127,7 +119,7 @@ const TimelineNew = () => {
               >
                 Neural Networks And Computer Vision
                 <p>
-                  <button onClick={toggleModal} className="read-more-button">
+                  <button onClick={toggleModal_1} className="read-more-button">
                     Read More
                   </button>
                 </p>
@@ -154,10 +146,10 @@ const TimelineNew = () => {
                 style={{ width: "fit-content", height: "auto" }}
               />
             </div>
-            <Modal toggleModal={isModalOpen} />
+            <Modal_1 toggleModal={isModalOpen_1} />
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            className="vertical-timeline-element--work relative"
             contentStyle={{
               background: "#fff",
               color: "#fff",
@@ -176,7 +168,7 @@ const TimelineNew = () => {
               >
                 Neural Networks And Computer Vision
                 <p>
-                  <button onClick={toggleModal} className="read-more-button">
+                  <button onClick={toggleModal_2} className="read-more-button">
                     Read More
                   </button>
                 </p>
@@ -203,9 +195,9 @@ const TimelineNew = () => {
                 style={{ width: "fit-content", height: "auto" }}
               />
             </div>
-            <Modal toggleModal={isModalOpen} />
+            <Modal_2 toggleModal={isModalOpen_2} />
           </VerticalTimelineElement>
-          <VerticalTimelineElement
+          {/* <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
               background: "#fff",
@@ -499,7 +491,7 @@ const TimelineNew = () => {
               />
             </div>
             <Modal toggleModal={isModalOpen} />
-          </VerticalTimelineElement>
+          </VerticalTimelineElement> */}
         </VerticalTimeline>
         <div className="border-[#11A8E4] border-solid border-3 rounded-lg w-fit mx-auto m-10">
           <div className="text-center text-white">
