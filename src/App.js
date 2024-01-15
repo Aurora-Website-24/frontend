@@ -1,17 +1,18 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import './App.css';
-import HackathonPage from './pages/HackathonPage';
-import Login from './pages/Login';
-import RegisterForm from './pages/RegisterForm';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import './App.css'
+import HackathonPage from './pages/HackathonPage'
+import HackathonForm from './pages/HackathonForm'
+import Login from './pages/Login'
+import RegisterForm from './pages/RegisterForm'
 function App() {
-
   const router = createBrowserRouter([
     {
       path: '/',
       element: (
         <>
           {/* <MainPage/> */}
-          <RegisterForm/>
+          {/* <HackathonForm /> */}
+          <RegisterForm />
         </>
       ),
     },
@@ -20,7 +21,7 @@ function App() {
       path: '/login',
       element: (
         <>
-          <Login/>
+          <Login />
         </>
       ),
     },
@@ -29,56 +30,41 @@ function App() {
       path: '/register',
       element: (
         <>
-          <Login/>
+          <Login />
         </>
       ),
     },
 
     {
       path: '/registration-form',
-      element: (
-        <>
-          {/* <Register /> */}
-        </>
-      ),
+      element: <>{/* <Register /> */}</>,
     },
 
     {
       path: '/hackathon-registration',
-      element: (
-        <>
-          {/* <HackathonRegistration /> */}
-        </>
-      ),
+      element: <>{/* <HackathonRegistration /> */}</>,
     },
 
     {
       path: '/hackathon',
       element: (
         <>
-          <HackathonPage/>
+          <HackathonPage />
         </>
       ),
     },
 
     {
       path: '/*',
-      element: (
-        <>
-          {/* <Error /> */}
-        </>
-      ),
+      element: <>{/* <Error /> */}</>,
     },
-
-  ]);
+  ])
 
   return (
     <div className="App">
-
       <RouterProvider router={router} />
-
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
