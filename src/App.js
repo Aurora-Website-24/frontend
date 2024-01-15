@@ -1,3 +1,5 @@
+
+
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import HackathonPage from './pages/HackathonPage';
@@ -5,6 +7,7 @@ import MainPage from './pages/MainPage';
 import Login from './pages/Login';
 import RegisterForm from './pages/RegisterForm';
 import HackathonForm from './pages/HackathonForm'
+
 function App() {
 
   const router = createBrowserRouter([

@@ -9,7 +9,10 @@ module.exports = {
 
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'form-bg': "url('/src/images/reg-form-bg.svg')"
+    },
   },
 
   plugins: [],
@@ -17,4 +20,4 @@ module.exports = {
   plugins: [nextui()],
 
 }
-
+}

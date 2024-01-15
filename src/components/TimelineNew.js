@@ -6,15 +6,11 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import neuralnetworks from "../images/neuralnetworks.png";
-<<<<<<< HEAD
-import trophycup from '../images/whitetrophy.svg';
-import TitleStuff from './Title_Stuff';
-=======
+
 import trophycup from "../images/whitetrophy.svg";
 import Modal from "./Modal";
 import { useInView } from "react-intersection-observer";
 import Confetti from "./Confetti";
->>>>>>> c77230fabfddd2afff1ea43e9019babd7ee1729b
 
 const TimelineNew = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,49 +48,7 @@ const TimelineNew = () => {
   }, [inView]);
 
   return (
-<<<<<<< HEAD
-    <div>
-      <TitleStuff name="timeline"/>
-      <VerticalTimeline>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{
-            background: "#fff",
-            color: "#fff",
-            borderRadius: "10px",
-            fontSize: 20,
-            fontFamily: "Roboto, sans-serif",
-          }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-          date={
-            <span
-              style={{
-                color: "#338EF7",
-                fontSize: "18px",
-                fontWeight: "bold",
-              }}
-            >
-              Neural Networks And Computer Vision
-              <p>Lorem16</p>
-            </span>
-          }
-          iconStyle={{
-            background: "#fff",
-            color: "#000",
-            boxShadow: "0 0 10px 5px rgba(51, 142, 247,0.5)",
-          }}
-        >
-          <div>
-            <h2 className="vertical-timeline-element-title">05:30PM - 08:00PM</h2>
-            <h2>4th January, 2024</h2>
-            <h4 className="vertical-timeline-element-subtitle">.</h4>
-            <h4 style={{ color: "#000" }}>Neural Networks And Computer Vision</h4>
-            <img
-              src={neuralnetworks}
-              alt="Neural Networks and Computer Vision"
-              style={{ width: "fit-content", height: "auto" }}
-            />
-=======
+
     <div
       className={`fixed inset-0 z-[9998] ${
         isModalOpen ? "backdrop-blur-lg" : ""
@@ -557,7 +511,6 @@ const TimelineNew = () => {
             </h4>
            
             <Confetti />
->>>>>>> c77230fabfddd2afff1ea43e9019babd7ee1729b
           </div>
         </div>
       </div>
