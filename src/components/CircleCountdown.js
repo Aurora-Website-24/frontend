@@ -1,62 +1,46 @@
-import React from 'react'
-import Countdown from 'react-countdown'
+import React from "react";
+import Countdown from "react-countdown";
+import "./CircleCountdown.css";
 
 const CircularCountdown = ({ value, label }) => {
   return (
-    <div className="circular-countdown">
-      <div className="countdown-value">{value}</div>
-      <div className="countdown-label">{label}</div>
+    <div className="circular-countdown bg-black">
+      <div className="countdown-value text-3xl bg-black">{value}</div>
+      <div className="countdown-label bg-black">{label}</div>
     </div>
-  )
-}
+  );
+};
 
-export default function App(){
-  const targetDate = new Date('2024-02-03T00:00:00')
+export default function App() {
+  const targetDate = new Date("2024-02-03T00:00:00");
 
   // Calculate the remaining time in milliseconds
-  const remainingTimeInMillis = targetDate - new Date()
+  const remainingTimeInMillis = targetDate - new Date();
 
   return (
     <div className="App">
-      <h1>
-        Circular Countdown
-        <br />
-        React Component
-      </h1>
-      <div className="countdown-wrapper">
+      <div className="countdown-wrapper pb-24">
         {/* Countdown for Days */}
         <Countdown
           date={Date.now() + remainingTimeInMillis}
-          renderer={({ days }) => (
-            <CircularCountdown value={days} label="Days" />
-          )}
+          renderer={({ days }) => <CircularCountdown value={days} />}
         />
 
         {/* Countdown for Hours */}
         <Countdown
           date={Date.now() + remainingTimeInMillis}
-          renderer={({ hours }) => (
-            <CircularCountdown value={hours} label="Hours" />
-          )}
+          renderer={({ hours }) => <CircularCountdown value={hours} />}
         />
 
         {/* Countdown for Minutes */}
         <Countdown
           date={Date.now() + remainingTimeInMillis}
-          renderer={({ minutes }) => (
-            <CircularCountdown value={minutes} label="Minutes" />
-          )}
+          renderer={({ minutes }) => <CircularCountdown value={minutes} />}
         />
       </div>
-      {/* <p className="info">
-        Change component properties in the code filed on the right to try
-        different functionalities
-      </p> */}
     </div>
-  )
+  );
 }
-
-
 
 // import React from 'react'
 // import Countdown from 'react-countdown'

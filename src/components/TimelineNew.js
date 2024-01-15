@@ -507,7 +507,7 @@ const TimelineNew = () => {
             <h4 className="p-5 font-bold">
               Register Now for AURORA's Ultimate Experience!
             </h4>
-           
+
             <Confetti />
           </div>
         </div>

@@ -1,15 +1,15 @@
 import React from "react";
-
+import cross from "../images/x.svg";
 const Modal = ({ toggleModal }) => {
+  const handleBackdropClick = (e) => {
+    // Check if the click originated from outside the modal
+    if (e.target.classList.contains("backdrop")) {
+      toggleModal();
+    }
+  };
   return (
     <div>
-      {/* Blurred background
-      <div
-        className={`fixed inset-0 z-[9998] ${
-          toggleModal ? "bg-blur backdrop-blur-sm" : ""
-        }`}
-      ></div> */}
-
+      onClick={handleBackdropClick}
       <div className={toggleModal ? "" : "hidden"}>
         <div className="fixed inset-0 flex items-center justify-center z-[9999]">
           <div className="bg-white w-[70%] h-[80%] rounded-3xl shadow-lg overflow-hidden">
@@ -18,9 +18,22 @@ const Modal = ({ toggleModal }) => {
                 INTRODUCTION TO MACHINE LEARNING AND NEURAL NETWORKS
               </h3>
               <button
-                onClick={toggleModal}
+                style={{
+                  position: "absolute",
+                  top: "0.5rem",
+                  right: "1.5rem",
+                  cursor: "pointer",
+                }}
                 className="text-gray-500 hover:text-gray-700 focus:outline-none"
-              ></button>
+              >
+                <img
+                  src={cross}
+                  style={{
+                    width: "25px",
+                  }}
+                />
+                {/* close */}
+              </button>
             </div>
             <div className="p-5 overflow-y-auto max-h-[60vh]">
               <div className="my-4">
