@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import HackathonPage from './pages/HackathonPage';
 import Login from './pages/Login';
-import RegisterForm from './pages/RegisterForm';
+import MainPage from './pages/MainPage';
 function App() {
 
   const router = createBrowserRouter([
@@ -10,8 +10,7 @@ function App() {
       path: '/',
       element: (
         <>
-          {/* <MainPage/> */}
-          <RegisterForm/>
+          <MainPage/>
         </>
       ),
     },

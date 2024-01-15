@@ -121,7 +121,7 @@ const Carousel = () => {
 
 function Partners(){
     return (
-      <div className="text-white">
+      <div className="text-white pt-20">
         <div className="p-2">
           <TitleStuff name="partners"/>
         </div>

@@ -4,7 +4,7 @@ import About from "../components/About"
 import CircularCountdown from "../components/CircleCountdown"
 import Footer from "../components/Footer"
 import Gallery from '../components/Gallery'
-import Nav from "../components/Nav"
+import NavBar from '../components/NavBar'
 import Partners from "../components/Partners"
 import Sponsors from "../components/Sponsors"
 import TimelineNew from "../components/TimelineNew"
@@ -39,7 +39,7 @@ export default function MainPage() {
                 </ParallaxLayer>
                 <ParallaxLayer offset={0} speed={0.01}>
                     <div className="animation_layer parallax h-[10rem] p-4" id="text">
-                        <Nav/>
+                        <NavBar/>
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer offset={1} speed={0.20} >
